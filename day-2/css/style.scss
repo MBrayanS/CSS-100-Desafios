@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'animate';
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.centralizar-conteudo, body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.frame {
+	width: 400px;
+	height: 400px;
+	background: #3b82df;
+	border-radius: 5px;
+	box-shadow: 1px 2px 10px rgb(0,0,0,.5);
+	animation-name: animate-background-rev;
+	animation-duration: $animation-duration;
+	animation-timing-function: ease-in-out;
+}
+
+.menu {
+	width: max-content;
+	height: max-content;
+	cursor: pointer;	
+}
+
+.bar-top, .bar-center, .bar-bottom {
+	width: 80px;
+	height: 8px;
+	background: #d5e7ff;
+	border-radius: 3px;
+	box-shadow: 0px 2px 10px rgb(0,0,0,.5);
+	margin: 14px 0;
+	transition: background-color .2s ease-in-out;
+}
+
+.bar-top, .bar-center, .bar-bottom {
+	animation-duration: $animation-duration;
+	animation-timing-function: ease-in-out;
+}
+
+.bar-top { animation-name: animate-bar-top-rev; }
+.bar-center { animation-name: animate-bar-center-rev; }
+.bar-bottom { animation-name: animate-bar-bottom-rev; }
+
+.active-animation {
+	&.frame{
+		animation-name: animate-background;
+		animation-timing-function: $animation-curve-in;
+		animation-fill-mode: forwards;
+		animation-duration: $animation-duration;
+	}
+	.bar-top, .bar-center, .bar-bottom {
+		background: #a4b5cc;
+		animation-timing-function: $animation-curve-in;
+		animation-fill-mode: forwards;
+		animation-duration: $animation-duration;
+	}
+	.bar-top { animation-name: animate-bar-top; }
+	.bar-center { animation-name: animate-bar-center; }
+	.bar-bottom { animation-name: animate-bar-bottom; }
+}
+
+
+.no-animation {
+	-webkit-animation: none !important;
+	animation: none !important;
+}

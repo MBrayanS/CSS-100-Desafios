@@ -1,0 +1,6 @@
+$deg-top: 45deg;
+$deg-bottom: -45deg;
+$slide-down: 22px; 
+$slide-up: calc($slide-down)*-1;
+$animation-duration: .7s;
+$animation-curve-in: cubic-bezier(0.30,1,0.70,1);

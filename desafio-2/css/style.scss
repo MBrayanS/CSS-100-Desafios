@@ -1,0 +1,73 @@
+@import 'variaveis';
+@import 'animacoes';
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.centralizar-conteudo, body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quadro {
+	width: 400px;
+	height: 400px;
+	background: #3b82df;
+	border-radius: 5px;
+	box-shadow: 1px 2px 10px rgb(0,0,0,.5);
+	animation-name: animacao-de-fundo-reverso;
+	animation-duration: $duracao-da-animacao;
+	animation-timing-function: ease-in-out;
+}
+
+.menu {
+	width: max-content;
+	height: max-content;
+	cursor: pointer;	
+}
+
+.barra-de-cima, .barra-do-centro, .barra-de-baixo {
+	width: 80px;
+	height: 8px;
+	background: #d5e7ff;
+	border-radius: 3px;
+	box-shadow: 0px 2px 10px rgb(0,0,0,.5);
+	margin: 14px 0;
+	transition: background-color .2s ease-in-out;
+}
+
+.barra-de-cima, .barra-do-centro, .barra-de-baixo {
+	animation-duration: $duracao-da-animacao;
+	animation-timing-function: ease-in-out;
+}
+
+.barra-de-cima { animation-name: animar-barra-de-cima-reverso; }
+.barra-do-centro { animation-name: animar-barra-do-centro-reverso; }
+.barra-de-baixo { animation-name: animar-barra-de-baixo-reverso; }
+
+.ativar-animacao {
+	&.quadro{
+		animation-name: animacao-de-fundo;
+		animation-timing-function: $curva-da-animacao-in;
+		animation-fill-mode: forwards;
+		animation-duration: $duracao-da-animacao;
+	}
+	.barra-de-cima, .barra-do-centro, .barra-de-baixo {
+		background: #a4b5cc;
+		animation-timing-function: $curva-da-animacao-in;
+		animation-fill-mode: forwards;
+		animation-duration: $duracao-da-animacao;
+	}
+	.barra-de-cima { animation-name: animar-barra-de-cima; }
+	.barra-do-centro { animation-name: animar-barra-do-centro; }
+	.barra-de-baixo { animation-name: animar-barra-de-baixo; }
+}
+
+
+.sem-animacao {
+	-webkit-animation: none !important;
+	animation: none !important;
+}

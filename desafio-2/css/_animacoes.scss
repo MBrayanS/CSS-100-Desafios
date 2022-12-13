@@ -1,0 +1,43 @@
+@keyframes animacao-de-fundo {
+    0% { background: #3b82df; }
+  100% { background: #255799; } 
+}
+
+@keyframes animacao-de-fundo-reverso {
+    0% { background: #255799; } 
+  100% { background: #3b82df; }
+}
+
+@keyframes animar-barra-de-cima {
+    0% { transform: translateY(0) rotate(0)}
+    50% { transform: translateY($deslizar-pra-baixo) rotate(0)}
+    100% { transform: translateY($deslizar-pra-baixo) rotate($angulo-pra-cima) }
+}
+
+@keyframes animar-barra-do-centro{
+    0% { transform: scale(1); opacity: 1 }
+    100% { transform: scale(0); opacity: 0 } 
+}
+
+@keyframes animar-barra-de-baixo {
+    0% { transform: translateY(0) rotate(0) }
+    50% { transform: translateY($deslizar-pra-cima) rotate(0)}
+    100% { transform: translateY($deslizar-pra-cima) rotate($angulo-pra-baixo) }
+}
+
+@keyframes animar-barra-de-cima-reverso {
+    0% { transform: translateY($deslizar-pra-baixo) rotate($angulo-pra-cima) }
+    50% { transform: translateY($deslizar-pra-baixo) rotate(0)}
+    100% { transform: translateY(0) rotate(0)}
+}
+
+@keyframes animar-barra-do-centro-reverso{
+    0% { transform: scale(0); opacity: 0 } 
+    100% { transform: scale(1); opacity: 1 }
+}
+
+@keyframes animar-barra-de-baixo-reverso {
+    0% {transform: translateY($deslizar-pra-cima) rotate($angulo-pra-baixo) }
+    50% { transform: translateY($deslizar-pra-cima) rotate(0)}
+    100% { transform: translateY(0) rotate(0)}
+}

@@ -1,0 +1,6 @@
+$angulo-pra-cima: 45deg;
+$angulo-pra-baixo: calc($angulo-pra-cima)*-1;;
+$deslizar-pra-baixo: 22px; 
+$deslizar-pra-cima: calc($deslizar-pra-baixo)*-1;
+$duracao-da-animacao: .7s;
+$curva-da-animacao-in: cubic-bezier(0.30,1,0.70,1);
